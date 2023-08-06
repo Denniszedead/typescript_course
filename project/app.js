@@ -1,28 +1,11 @@
-// Person object
-/*const person: {
-    name: string;
-    age: number;
-    hobbies: string[]; // Array
-    role: [number, string]; // Tuple
-} = {
-    name: 'Bob',
-    age: 20,
-    hobbies: ['Sports', 'Cooking'],
-    role: [2, 'author']
-}*/
-var Role;
-(function (Role) {
-    Role[Role["ADMIN"] = 0] = "ADMIN";
-    Role[Role["READ_ONLY"] = 1] = "READ_ONLY";
-    Role[Role["AUTHOR"] = 2] = "AUTHOR";
-})(Role || (Role = {}));
-;
-var person = {
-    name: 'Bob',
-    age: 20,
-    hobbies: ['Sports', 'Cooking'],
-    role: Role.ADMIN
-};
-if (person.role == Role.ADMIN) {
-    console.log('Is admin');
+var userInput;
+var userName;
+userInput = 5;
+userInput = '5';
+if (typeof userInput === 'string') {
+    userName = userInput;
 }
+function generateError(message, code) {
+    throw { message: message, errorCode: code };
+}
+console.log(generateError('An error occurred!', 500));

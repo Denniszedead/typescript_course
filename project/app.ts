@@ -1,25 +1,14 @@
-// Person object
-/*const person: {
-    name: string;
-    age: number;
-    hobbies: string[]; // Array
-    role: [number, string]; // Tuple
-} = {
-    name: 'Bob',
-    age: 20,
-    hobbies: ['Sports', 'Cooking'],
-    role: [2, 'author']
-}*/
+let userInput: unknown;
+let userName: string;
 
-enum Role { ADMIN, READ_ONLY, AUTHOR};
-
-const person = {
-    name: 'Bob',
-    age: 20,
-    hobbies: ['Sports', 'Cooking'],
-    role: Role.ADMIN
+userInput = 5;
+userInput = '5';
+if (typeof userInput === 'string') {
+    userName = userInput;
 }
 
-if (person.role == Role.ADMIN) {
-    console.log('Is admin')
+function generateError(message: string, code: number) {
+    throw {message: message, errorCode: code};
 }
+
+console.log(generateError('An error occurred!', 500));
